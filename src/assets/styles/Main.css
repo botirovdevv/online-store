@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: inherit;
+}
+
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nav {
+  padding-top: 30px;
+}
+.nav-container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  .nav-logo {
+    width: 100%;
+  }
+}
+.nav-logo_title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #000;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 20px;
+}
+@media screen and (max-width: 830px) {
+  .nav-links {
+    display: none;
+  }
+}
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+.nav-link:hover {
+  border-bottom: 1px solid #000;
+}
+.nav-form {
+  position: relative;
+  border-radius: 4px;
+  width: 243px;
+  height: 40px;
+  background: #f5f5f5;
+}
+@media screen and (max-width: 830px) {
+  .nav-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-form {
+    display: none;
+  }
+}
+.nav-input {
+  padding: 7px 12px 7px 12px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #000;
+}
+.nav-search_btn {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  border: none;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 30px;
+}
+@media screen and (max-width: 830px) {
+  .nav-items {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-items {
+    width: unset;
+  }
+}
+.nav-items_links {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 30px;
+}
+.nav-search_link {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .nav-search_link {
+    display: block;
+  }
+}
+
+.banner {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+.banner-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.banner-slides {
+  width: 100%;
+}
+.banner-category {
+  border-right: 1px solid #ccc;
+  height: 100%;
+  width: 170px;
+}
+.banner-category_links {
+  display: flex;
+  align-items: start;
+  justify-content: unset;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 20px;
+}
+.banner-category_link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+.swiper img {
+  width: 100%;
+}
+.swiper-img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.swiper-slide {
+  --add-bottom: 50px;
+  padding-bottom: var(--add-bottom);
+}
+
+.swiper-pagination [class^=swiper-pagination] {
+  top: calc(50% - var(--add-bottom) / 2);
+}/*# sourceMappingURL=Main.css.map */

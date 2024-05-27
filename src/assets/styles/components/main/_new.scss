@@ -1,0 +1,46 @@
+.new{
+    padding-top: 50px;
+
+    &-title{
+        font-family: $second-family;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 133%;
+        letter-spacing: 0.04em;
+        color: $text2;
+        padding: 20px 0 50px 0;
+    }
+
+    &-content{
+        @include flex(center, center);
+        gap: 40px;
+
+        @media screen and (max-width: 1240px){
+            gap: 20px;
+        }
+
+        @media screen and (max-width: 1200px){
+            flex-direction: column;
+        }
+    }
+
+    &-images{
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 25px;
+
+    }
+
+    &-products{
+        @include flex(center, center);
+        gap: 25px;
+
+        @media screen and (max-width: 640px){
+            flex-direction: column;
+        }
+    }
+
+    &-img{
+        width: 100%;
+    }
+}

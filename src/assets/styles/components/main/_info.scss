@@ -1,0 +1,42 @@
+.info{
+    padding-top: 100px;
+
+    &-cards{
+        @include flex(center, center);
+        gap: 70px;
+        flex-wrap: wrap
+    }
+
+    &-card{
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &-icons{
+        position: relative;
+    }
+
+    &-deliver_icon{
+        position: absolute;
+        top: 20px;
+        left: 21px;
+    }
+
+    &-title{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: $text2;
+    }
+
+    &-subtitle{
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: $text2;
+    }
+}

@@ -1,0 +1,3 @@
+import * as React from "react";
+const SvgComponent = props => <svg xmlns="http://www.w3.org/2000/svg" width={81} height={80} fill="none" {...props}><path fill="#2F2E30" d="M80.5 40c0 22.091-17.909 40-40 40S.5 62.091.5 40s17.909-40 40-40 40 17.909 40 40Zm-69.093 0c0 16.068 13.026 29.093 29.093 29.093 16.068 0 29.093-13.026 29.093-29.093S56.567 10.907 40.5 10.907 11.407 23.933 11.407 40Z" opacity={0.3} /><circle cx={40.5} cy={40} r={29} fill="#000" /></svg>;
+export default SvgComponent;
