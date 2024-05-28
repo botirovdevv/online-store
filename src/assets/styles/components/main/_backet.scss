@@ -1,0 +1,216 @@
+.backet {
+    padding-top: 70px;
+
+    &-cards {
+        @include flex(center, unset);
+        flex-direction: column;
+        gap: 50px
+    }
+
+    &-card {
+        @include flex(center, space-between);
+        width: 100%;
+        box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.05);
+        background: $primary;
+        border-radius: 4px;
+        height: 102px;
+        padding: 0 25px
+    }
+
+    &-image {
+        @include flex(center, unset);
+        gap: 10px;
+
+        @media screen and (max-width: 400px){
+            flex-direction: column;
+        }
+    }
+
+    &-img {
+        width: 50px;
+        height: 39px;
+    }
+
+    &-name {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $text2;
+    }
+
+    &-price {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $text2;
+    }
+
+    &-quantities {
+        @include flex(center, center);
+        gap: 5px;
+        border: 1.50px solid rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        width: 72px;
+        height: 44px;
+
+        @media screen and (max-width: 500px){
+            border: none;
+            width: 42px;
+        }
+    }
+
+    &-buttons {
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    &-quantity {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $text2;
+        border: none;
+    }
+
+    &-button {
+        border: none;
+    }
+
+    &-delete_btn {
+        border: none;
+        @include flex(center, unset);
+        gap: 5px;
+        border: 1px solid $button2;
+        padding: 6px 30px;
+        border-radius: 4px;
+        color: $button2;
+        font-family: $font-family;
+        font-size: 16px;
+
+        @media screen and (max-width: 530px){
+            padding: 6px 10px;
+        }
+    }
+
+    &-delete_title{
+        @media screen and (max-width: 500px){
+            display: none;
+        }
+    }
+
+
+    &-title {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $text2;
+    }
+
+    &-form {
+        @include flex(center, unset);
+        gap: 15px;
+
+        @media screen and (max-width: 515px){
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &_input {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $text2;
+            padding: 10px;
+            border: 1px solid $text2;
+            border-radius: 4px;
+            width: 300px;
+            height: 56px;
+            outline: none;
+
+            @media screen and (max-width: 515px){
+                width: 100%;
+            }
+        }
+
+        &_btn {
+            border-radius: 4px;
+            padding: 16px 48px;
+            width: 211px;
+            height: 56px;
+            background: $secondary-2;
+            border: none;
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: $text;
+
+            @media screen and (max-width: 555px){
+                width: 100%;
+            }
+        }
+    }
+
+    &-total_card{
+        border: 1.50px solid $text2;
+        border-radius: 4px;
+        width: 470px;
+        height: 324px;
+        padding: 30px 20px;
+
+        @media screen and (max-width: 555px){
+            width: 100%;
+        }
+    }
+
+    &-extra{
+        @include flex(start, space-between);
+        padding-top: 70px;
+        gap: 20px;
+
+        @media screen and (max-width: 1000px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-total_number{
+        @include flex(center, space-between);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &-total_title{
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: $text2;
+    }
+
+    &-total_btn{
+        border-radius: 4px;
+        padding: 16px 48px;
+        width: 260px;
+        height: 56px;
+        background-color: $secondary-2;
+        border: none;
+        font-family: $font-family;
+        font-weight: 500;
+        @include adaptive-value('font-size', 16, 14);
+        line-height: 150%;
+        color: $text;
+        margin: 0 auto;
+        @include flex(center, center);
+
+        @media screen and (max-width: 420px){
+            width: 100%;
+        }
+    }
+}

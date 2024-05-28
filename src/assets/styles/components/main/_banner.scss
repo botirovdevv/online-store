@@ -15,6 +15,33 @@
         height: 100%;
         @include flex(center, center);
         padding: 20px;
+
+        @media screen and (max-width: 660px) {
+            display: none;
+        }
+    }
+
+    &-ads{
+        @include flex(center, center);
+        width: 100%;
+        flex-direction: column;
+        display: none;
+
+        @media screen and (max-width: 660px) {
+            display: block;
+        }
+        &_img{
+            @include adaptive-value('width', 200, 100);
+            margin: 0 auto;
+            @include flex(center, center);
+        }
+
+        &_title{
+            font-family: $font-family;
+            text-align: center;
+            @include adaptive-value('font-size', 18, 12);
+            width: 100%;
+        }
     }
 
     &-category{

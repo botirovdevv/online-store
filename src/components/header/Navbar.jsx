@@ -36,7 +36,7 @@ function Navbar() {
                             <Link>
                                 <HeartIcon />
                             </Link>
-                            <Link>
+                            <Link to="/backet">
                                 <BacketIcon />
                             </Link>
                         </div>

@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import StarIcon from "../../assets/icons/SolidStarIcon"
+import { useCart } from 'react-use-cart'
 
 function Jewelery() {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
+    const { addItem } = useCart()
     useEffect(() => {
         setLoading(true)
         axios.get("https://fakestoreapi.com/products/category/jewelery").then((res) => {
@@ -26,21 +28,26 @@ function Jewelery() {
                         {
                             products.map((item, key) => {
                                 return (
-                                    <div className="products-card">
+                                    <div className="products-card" key={item.id}>
                                         <div className="products-image">
                                             <img src={item.image} className='products-img' alt="" />
                                         </div>
-
                                         <div className="products-items">
                                             <h1 className='products-name'>{item.title.substring(0, 10)}</h1>
-                                            <span className='products-price'>{item.price}$</span>
+                                            <h2 className='products-price'>{item.price}$</h2>
+
                                             <span className='products-rate'>
                                                 <StarIcon />
                                                 <span className='products-rate_title'>
-                                                    {item.rating.rate}
+                                                    {item.rating && item.rating.rate}
                                                 </span>
                                             </span>
-                                            <button className='products-add_btn'>Add to card</button>
+                                            <button
+                                                className='products-add_btn'
+                                                onClick={() => addItem(item)}
+                                            >
+                                                Add to Cart
+                                            </button>
                                         </div>
                                     </div>
 
