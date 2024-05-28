@@ -17,14 +17,14 @@ function New() {
                 <h1 className='new-title'>New Arrival</h1>
                 <div className="new-content">
                     <div>
-                        <img src={img1} className='new-img' alt="" />
+                        <img src={img1} referrerPolicy="no-referrer" className='new-img' alt="" />
                     </div>
                     <div className="new-images">
-                        <img src={img2} className='new-img' alt="" />
+                        <img src={img2} referrerPolicy="no-referrer" className='new-img' alt="" />
 
                         <div className='new-products'>
-                            <img src={img3} className='new-img' alt="" />
-                            <img src={img4} className='new-img' alt="" />
+                            <img src={img3} referrerPolicy="no-referrer" className='new-img' alt="" />
+                            <img src={img4} referrerPolicy="no-referrer" className='new-img' alt="" />
                         </div>
                     </div>
                 </div>

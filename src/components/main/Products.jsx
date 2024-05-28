@@ -4,7 +4,8 @@ import Backet from '../../pages/Backet';
 import ItemCard from '../../providers/ItemCard';
 import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
-import StarIcon from "../../assets/icons/SolidStarIcon"
+import StarIcon from "../../assets/icons/SolidStarIcon";
+import Skeleton from '../../components/skeleton/Index';
 
 function Products() {
     const [loading, setLoading] = useState(false);
@@ -17,13 +18,21 @@ function Products() {
             .then((res) => {
                 setProducts(res.data);
                 setLoading(false);
-            })
+            });
     }, []);
 
     return (
         <>
             {loading ? (
-                <h1>Loading</h1>
+                <section className="products">
+                    <div className="container">
+                        <div className="products-cards">
+                            {Array.from(new Array(8)).map((_, index) => (
+                                <Skeleton key={index} />
+                            ))}
+                        </div>
+                    </div>
+                </section>
             ) : (
                 <section className="products">
                     <div className="container">
@@ -36,12 +45,11 @@ function Products() {
                                 {products.map((item) => (
                                     <div className="products-card" key={item.id}>
                                         <div className="products-image">
-                                            <img src={item.image} className='products-img' alt="" />
+                                            <img src={item.image} referrerPolicy="no-referrer" className='products-img' alt="" />
                                         </div>
                                         <div className="products-items">
                                             <h1 className='products-name'>{item.title.substring(0, 10)}</h1>
                                             <h2 className='products-price'>{item.price}$</h2>
-
                                             <span className='products-rate'>
                                                 <StarIcon />
                                                 <span className='products-rate_title'>

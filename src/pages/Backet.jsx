@@ -32,8 +32,13 @@ function Backet() {
         setValue('');
     };
 
-    if (isEmpty) return <p>Your cart is empty</p>;
-
+    if (isEmpty) return(
+        <div className="container">
+            <div className="backet-warning">
+                <h1 className='backet-warning_title'>Your cart is empty!</h1>
+            </div>
+        </div>
+    )
     return (
         <div className="backet">
             <div className="container">

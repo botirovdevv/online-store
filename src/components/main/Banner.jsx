@@ -15,7 +15,7 @@ function Banner() {
                                 {
                                     sidebarLinks.map((item, key) => {
                                         return (
-                                            <Link to={item.to} className='banner-category_link'>{item.title}</Link>
+                                            <Link to={item.to} key={item.id} className='banner-category_link'>{item.title}</Link>
                                         )
                                     })
                                 }
@@ -23,7 +23,17 @@ function Banner() {
                         </div>
                     </div>
                     <div className="banner-video">
-                        <iframe width="100%" height="344" src="https://www.youtube.com/embed/xqyUdNxWazA?si=Ku54hQexR_kdZp1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe
+                            width="100%"
+                            height="344"
+                            src="https://www.youtube.com/embed/xqyUdNxWazA?si=Ku54hQexR_kdZp1A"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                            sandbox="allow-scripts allow-same-origin"
+                        ></iframe>
                     </div>
                     <div className="banner-ads">
                         <img src={Img} className='banner-ads_img' alt="" />

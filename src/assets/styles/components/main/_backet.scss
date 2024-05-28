@@ -213,4 +213,15 @@
             width: 100%;
         }
     }
+
+    &-warning{
+        @include flex(center, center);
+        height: 100vh;
+    }
+
+    &-warning_title{
+        font-family: $font-family;
+        @include adaptive-value('font-size', 30, 22);
+        letter-spacing: 0.78px;
+    }
 }
