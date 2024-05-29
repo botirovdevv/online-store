@@ -49,7 +49,7 @@ function Navbar() {
 
                     <ul className='nav-links'>
                         <Link className='nav-link' to="/">Home</Link>
-                        <Link className='nav-link' to="/">About</Link>
+                        <Link className='nav-link' to="/about">About</Link>
                         <Link className='nav-link' to="/">Contact</Link>
                         <Link className='nav-link' to="/">Sign up</Link>
                     </ul>

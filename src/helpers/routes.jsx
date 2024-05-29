@@ -6,6 +6,8 @@ import Jewelery from "../pages/categories/Jewelery";
 import Men from "../pages/categories/Men";
 import Products from "../pages/categories/Products";
 import Woman from "../pages/categories/Woman";
+import About from "../pages/about/About";
+import Index from "../pages/about/Index";
 
 export const routes = [
     {
@@ -47,4 +49,9 @@ export const routes = [
         path: "/backet",
         element: <Backet/>
     },
+
+    {
+        path: "/about",
+        element: <Index/>
+    }
 ]
