@@ -9,6 +9,7 @@ function Navbar() {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [isFocus, setIsFocus] = useState(false)
+    const [show, setShow] = useState(false)
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -34,8 +35,10 @@ function Navbar() {
 
     const handleChange = (value) => {
         setInput(value);
-
     };
+    const showInput = () => {
+        setShow(true)
+    }
 
     return (
         <nav className='nav'>
@@ -55,7 +58,7 @@ function Navbar() {
                     </ul>
 
                     <div className="nav-items">
-                        <form className='nav-form' onSubmit={(e) => e.preventDefault()}>
+                        <form className={show ? 'nav-form show' : "nav-form"} onSubmit={(e) => e.preventDefault()}>
                             <input
                                 type="text"
                                 placeholder='What are you looking for?'
@@ -77,14 +80,17 @@ function Navbar() {
                                     </div>
                                 )}
                             </div>
-                            <Link to="/search" className='nav-search_btn' >
+                            <button  className='nav-search_btn' >
                                 <Search />
-                            </Link>
+                            </button>
+                            <button onClick={() => setShow(false)} className='nav-close_btn' >
+                                x
+                            </button>
                         </form>
                         <div className="nav-items_links">
-                            <Link className='nav-search_link' to="/search">
+                            <button onClick={showInput} className='nav-search_link'>
                                 <Search />
-                            </Link>
+                            </button>
                             <Link>
                                 <HeartIcon />
                             </Link>

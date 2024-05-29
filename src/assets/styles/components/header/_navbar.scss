@@ -59,12 +59,22 @@
     height: 40px;
     background: $secondary;
 
+
     @media screen and (max-width: 830px){
       width: 100%;
     }
 
     @media screen and (max-width: 500px){
       display: none;
+    }
+
+    &.show{
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
     }
   }
   
@@ -90,6 +100,7 @@
     flex-direction: column;
     transition: all 0.2s ease-in-out;
     z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     &.show{
       height: 250px;
@@ -104,13 +115,28 @@
     padding: 10px 20px;
   }
 
-
-
   &-search_btn{
     position: absolute;
     top: 9px;
     right: 10px;
     border: none;
+
+    @media screen and (max-width: 500px){
+      right: 26px;
+    }
+  }
+
+  &-close_btn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    font-size: 24px;
+    display: none;
+
+    @media screen and (max-width: 500px){
+      display: block;
+    }
   }
 
   &-items{
@@ -133,6 +159,7 @@
 
   &-search_link{
     display: none;
+    border: none;
 
     @media screen and (max-width: 500px){
       display: block;
