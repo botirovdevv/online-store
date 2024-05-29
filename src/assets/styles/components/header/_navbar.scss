@@ -1,4 +1,4 @@
-.nav {
+  .nav {
   padding-top: 30px;
 
   &-container {
@@ -81,6 +81,30 @@
     line-height: 150%;
     color: $text2;
   }
+
+  &-search_results{
+    width: 100%;
+    background-color: $bg;
+    height: 0;
+    overflow-y: hidden;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+
+    &.show{
+      height: 250px;
+      overflow-y: scroll
+    }
+  }
+  
+  &-search_result{
+    @include flex(center, start);
+    gap: 14px;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+
 
   &-search_btn{
     position: absolute;
