@@ -8,6 +8,7 @@ const SvgComponent = () => (
     style={{
       fill: "rgba(0, 0, 0, 1)",
       transform: "",
+      border: "none",
       msfilter: "",
     }}
   >

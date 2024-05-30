@@ -8,6 +8,7 @@ import Products from "../pages/categories/Products";
 import Woman from "../pages/categories/Woman";
 import About from "../pages/about/About";
 import Index from "../pages/about/Index";
+import ProductDetail from "../pages/ProductDetails";
 
 export const routes = [
     {
@@ -53,5 +54,10 @@ export const routes = [
     {
         path: "/about",
         element: <Index/>
+    },
+
+    {
+        path: "/product/:id",
+        element: <ProductDetail/>
     }
 ]
