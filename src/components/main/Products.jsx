@@ -44,11 +44,11 @@ function Products() {
                             <div className="products-cards">
                                 {products.map((item) => (
                                     <div className="products-card" key={item.id}>
-                                            <Link to={`/product/${item.id}`}>
-                                        <div className="products-image">
-                                                <img src={item.image}  className='products-img' alt="" />
-                                        </div>
-                                            </Link>
+                                        <Link to={`/product/${item.id}`}>
+                                            <div className="products-image">
+                                                <img src={item.image} className='products-img' alt="" />
+                                            </div>
+                                        </Link>
                                         <div className="products-items">
                                             <h1 className='products-name'>{item.title.substring(0, 10)}</h1>
                                             <h2 className='products-price'>{item.price}$</h2>

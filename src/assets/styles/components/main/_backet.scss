@@ -1,10 +1,10 @@
 .backet {
-    padding-top: 70px;
+    padding-top: 140px;
 
     &-cards {
         @include flex(center, unset);
         flex-direction: column;
-        gap: 50px
+        gap: 40px
     }
 
     &-card {

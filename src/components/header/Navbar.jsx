@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Search from "../../assets/icons/Search";
 import HeartIcon from "../../assets/icons/HeartIcon";
 import BacketIcon from "../../assets/icons/BacketIcon";
+import CloseIcon from "../../assets/icons/CloseIcon"
+import { useCart } from 'react-use-cart';
 
 function Navbar() {
     const [input, setInput] = useState("");
@@ -10,6 +12,11 @@ function Navbar() {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [isFocus, setIsFocus] = useState(false)
     const [show, setShow] = useState(false)
+
+    const {
+        totalUniqueItems,
+
+    } = useCart();
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -66,25 +73,24 @@ function Navbar() {
                                 onChange={(e) => handleChange(e.target.value)}
                                 className='nav-input'
                                 onFocus={() => setIsFocus(true)}
-                                onBlur={() => setIsFocus(false)}
                             />
                             <div className={isFocus ? "nav-search_results show" : "nav-search_results"}>
                                 {filteredProducts.length > 0 && (
                                     <div className="search-result">
                                         {filteredProducts.map((product) => (
-                                            <div key={product.id} className="nav-search_result">
+                                            <Link to={`/product/${product.id}`} key={product.id} className="nav-search_result">
                                                 <img src={product.image} alt={product.title} width="50" />
                                                 <span className='products-name'>{product.title.substring(0, 10)}...</span>
-                                            </div>
+                                            </Link>
                                         ))}
                                     </div>
                                 )}
                             </div>
-                            <button  className='nav-search_btn' >
+                            <button className='nav-search_btn' >
                                 <Search />
                             </button>
                             <button onClick={() => setShow(false)} className='nav-close_btn' >
-                                x
+                                <CloseIcon />
                             </button>
                         </form>
                         <div className="nav-items_links">
@@ -94,7 +100,8 @@ function Navbar() {
                             <Link>
                                 <HeartIcon />
                             </Link>
-                            <Link to="/backet">
+                            <Link to="/backet" className='nav-backet_link'>
+                                <h1 className='nav-backet_number'>{totalUniqueItems}</h1>
                                 <BacketIcon />
                             </Link>
                         </div>
