@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useCart } from 'react-use-cart';
 import Delete from "../assets/icons/TrashIcon";
+import { Helmet } from 'react-helmet';
 
 function Backet() {
     const {
@@ -32,7 +33,7 @@ function Backet() {
         setValue('');
     };
 
-    if (isEmpty) return(
+    if (isEmpty) return (
         <div className="container">
             <div className="backet-warning">
                 <h1 className='backet-warning_title'>Your cart is empty!</h1>
@@ -41,6 +42,9 @@ function Backet() {
     )
     return (
         <div className="backet">
+            <Helmet>
+                <title>Backet</title>
+            </Helmet>
             <div className="container">
                 <div className="backet-content">
                     <div className='backet-cards'>

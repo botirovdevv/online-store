@@ -4,6 +4,7 @@ import StarIcon from "../../assets/icons/SolidStarIcon"
 import { useCart } from 'react-use-cart'
 import ItemCard from '../../providers/ItemCard'
 import Skeleton from "../../components/skeleton/Index"
+import { Helmet } from 'react-helmet'
 
 function Products() {
     const [products, setProducts] = useState([])
@@ -31,6 +32,9 @@ function Products() {
                     </section>
                 ) : (
                     <section className="men">
+                        <Helmet>
+                            <title>All products</title>
+                        </Helmet>
                         <div className="container">
                             <div className="products-text">
                                 <div className='products-line'></div>

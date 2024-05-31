@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import StarIcon from "../../assets/icons/SolidStarIcon"
 import { useCart } from 'react-use-cart'
 import Skeleton from "../../components/skeleton/Index"
+import { Helmet } from 'react-helmet'
 
 function Jewelery() {
     const [products, setProducts] = useState([])
@@ -30,6 +31,9 @@ function Jewelery() {
                     </section>
                 ) : (
                     <section className="men">
+                        <Helmet>
+                            <title>Jewerelies</title>
+                        </Helmet>
                         <div className="container">
                             <div className="products-text">
                                 <div className='products-line'></div>
@@ -73,7 +77,7 @@ function Jewelery() {
                         </div>
                     </section>
                 )
-        }
+            }
         </>
     )
 }
