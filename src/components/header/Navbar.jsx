@@ -15,7 +15,6 @@ function Navbar() {
 
     const {
         totalUniqueItems,
-
     } = useCart();
 
     useEffect(() => {
@@ -78,7 +77,7 @@ function Navbar() {
                                 {filteredProducts.length > 0 && (
                                     <div className="search-result">
                                         {filteredProducts.map((product) => (
-                                            <Link to={`/product/${product.id}`} key={product.id} className="nav-search_result">
+                                            <Link to={`/product/${product.id}`} onClick={() => setIsFocus(false)} key={product.id} className="nav-search_result">
                                                 <img src={product.image} alt={product.title} width="50" />
                                                 <span className='products-name'>{product.title.substring(0, 10)}...</span>
                                             </Link>
