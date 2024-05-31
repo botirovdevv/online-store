@@ -82,7 +82,7 @@ function Navbar() {
                                                 <span className='products-name'>{product.title.substring(0, 10)}...</span>
                                             </Link>
                                         ))}
-                                    </div>
+                                    </div>  
                                 )}
                             </div>
                             <button className='nav-search_btn' >

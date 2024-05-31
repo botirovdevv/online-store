@@ -9,6 +9,7 @@ import Woman from "../pages/categories/Woman";
 import About from "../pages/about/About";
 import Index from "../pages/about/Index";
 import ProductDetail from "../pages/ProductDetails";
+import NotFound from "../components/not-found/NotFound";
 
 export const routes = [
     {
@@ -59,5 +60,10 @@ export const routes = [
     {
         path: "/product/:id",
         element: <ProductDetail/>
+    },
+
+    {
+        path: "*",
+        element: <NotFound/>
     }
 ]
