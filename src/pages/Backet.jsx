@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useCart } from 'react-use-cart';
 import Delete from "../assets/icons/TrashIcon";
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 function Backet() {
     const {
@@ -109,7 +110,7 @@ function Backet() {
                                     <h2 className='backet-price'>Coupon: </h2>
                                     <h2 className='backet-price'>{active ? "Have" : "Have not"}</h2>
                                 </div>
-                                <button className="backet-total_btn">Procees to checkout</button>
+                                <Link to="/checkout" className="backet-total_btn">Procees to checkout</Link>
                             </div>
                         </div>
                     </div>

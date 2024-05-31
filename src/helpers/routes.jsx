@@ -10,6 +10,7 @@ import About from "../pages/about/About";
 import Index from "../pages/about/Index";
 import ProductDetail from "../pages/ProductDetails";
 import NotFound from "../components/not-found/NotFound";
+import CheckProduct from "../pages/check-product/CheckProduct";
 
 export const routes = [
     {
@@ -65,5 +66,10 @@ export const routes = [
     {
         path: "*",
         element: <NotFound/>
+    },
+
+    {
+        path: "/checkout",
+        element: <CheckProduct/>
     }
 ]
